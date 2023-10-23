@@ -9,12 +9,12 @@ from plot.generate import generate_all_plots
 
 def main():
     with db:
-        # mqtt_client = Process(target=parse_values)
-        # animate_plot = Process(target=animate_line_plot)
-        # mqtt_client.start()
-        # animate_plot.start()
-        # mqtt_client.join()
-        # animate_plot.join()
+        mqtt_client = Process(target=parse_values)
+        animate_plot = Process(target=animate_line_plot)
+        mqtt_client.start()
+        animate_plot.start()
+        mqtt_client.join()
+        animate_plot.join()
         generate_all_plots()
 
 

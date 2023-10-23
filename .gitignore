@@ -1,3 +1,5 @@
 .idea
 /images/
 /data/
+venv
+db/database.db
